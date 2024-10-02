@@ -1,0 +1,16 @@
+# Django
+problems_api/__pycache__/
+problems_api/db.sqlite3
+problems_api/static/
+problems_api/media/
+*.pyc
+*.pyo
+.env
+
+# Node.js / React
+problems-frontend/node_modules/
+problems-frontend/build/
+.env
+
+# General
+.DS_Store
