@@ -30,11 +30,13 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Problem1 from './components/Problem1';
 import Problem2 from './components/Problem2';
+import Home from './components/Home';
 
 function App() {
     return (
         <Router>
             <Routes>
+                <Route path="/" element={<Home />} />
                 <Route path="/problem-1" element={<Problem1 />} />
                 <Route path="/problem-2" element={<Problem2 />} />
             </Routes>

@@ -1,13 +1,14 @@
-from django.shortcuts import render
+#from django.shortcuts import render
+#from collections import defaultdict
 
 # Create your views here.
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from collections import defaultdict
 
 
-# Clase para resolver el problema del ajedrez
+
+# Chess solution
 class ChessSolver:
     def __init__(self, n, k, rq, cq, obstacles):
         self.n = n
@@ -49,7 +50,7 @@ def queens_attack(request):
 
 ################# Problem 2 ############
 
-# Clase para resolver el problema de cadenas
+# Class to resolve string
 class StringSolver:
     def __init__(self, t):
         self.t = t
