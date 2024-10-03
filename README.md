@@ -34,13 +34,18 @@ Navigate to the `problems_api` folder:
 cd problems_api
 ```
 Create a virtual environment:
+```bash
+pip install virtualenv
+virtualenv venv
+```
+
 - On Linux/macOS:
   ```bash
   source venv/bin/activate
   ```
 - On Windows:
   ```bash
-  venv\Scripts\activate
+  .\venv\Scripts\activate
    ```
 ### Step 2: Install Dependencies
 Once the virtual environment is active, install the necessary dependencies using `requirements.txt`:
@@ -65,22 +70,12 @@ Navigate to the `problems-frontend` folder:
 ### Step 2: Run the Frontend Development Server
 Start the React development server:
 ```bash
+npm install
+```
+```bash
 npm start
 ```
 The React application will be available at `http://localhost:3000` and will communicate with the Django backend via API.
-
-## CORS Configuration
-To allow communication between the frontend (React) and the backend (Django API), CORS is enabled in the Django project.
-
-Ensure that in `settings.py` of your Django project (`problems_api/problems/`), you have configured the allowed origins as follows:
-
-```python
-# settings.py
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-]
-```
-This allows requests from the React development server to access the Django API.
 
 ## Running the Project
 ### Step 1: Start the Backend Server (Django API)
@@ -95,6 +90,20 @@ In a separate terminal, navigate to the `problems-frontend` folder and run:
 npm start
 ```
 Both the frontend and backend servers should now be running. The frontend will be accessible at `http://localhost:3000`, and the API will be available at `http://localhost:8000`.
+
+# Additional configuration (if necessary)
+## CORS Configuration
+To allow communication between the frontend (React) and the backend (Django API), CORS is enabled in the Django project.
+
+Ensure that in `settings.py` of your Django project (`problems_api/problems/`), you have configured the allowed origins as follows:
+
+```python
+# settings.py
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
+```
+This allows requests from the React development server to access the Django API.
 
 ## API Endpoints
 The following endpoints are available for each problem:
@@ -124,4 +133,4 @@ The following endpoints are available for each problem:
   }
   ```
 
-  ### Samuel Romero A | romerotitosamuel@gmail.com | (+591) 76667818
+  ### Samuel Romero A. | romerotitosamuel@gmail.com | (+591) 76667818
