@@ -77,20 +77,6 @@ npm start
 ```
 The React application will be available at `http://localhost:3000` and will communicate with the Django backend via API.
 
-## Running the Project
-### Step 1: Start the Backend Server (Django API)
-In a terminal, navigate to the `problems_api` folder and run:
-```bash
-python manage.py runserver
-```
-### Step 2: Start the Frontend Server (React)
-In a separate terminal, navigate to the `problems-frontend` folder and run:
-
-```bash
-npm start
-```
-Both the frontend and backend servers should now be running. The frontend will be accessible at `http://localhost:3000`, and the API will be available at `http://localhost:8000`.
-
 # Additional configuration (if necessary)
 ## CORS Configuration
 To allow communication between the frontend (React) and the backend (Django API), CORS is enabled in the Django project.
